@@ -1,6 +1,6 @@
 patch:
-  # key_binder:
-  #   {}
+  key_binder:
+    {}
   menu/page_size: 9
   schema_list:
     - schema: rime_mint

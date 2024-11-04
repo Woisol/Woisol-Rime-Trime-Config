@@ -1,7 +1,26 @@
 patch:
-  melt_eng:
-    enable_sentence: true         # 关闭自动造句
-    enable_completion: true       # 关闭自动提示
+  melt_eng/enable_sentence: true         # 关闭自动造句
+  melt_eng/enable_completion: true       # 关闭自动提示
+  punctuator/half_shape:
+      "#": "#"
+      "*": ["*", "×",],
+      ",": { commit: ， }
+      '.' : { commit: 。 }
+      "`": "`"
+      "~": "~"
+      "@": "@"
+      "=": "="
+      "/": ["/", "÷",]
+      '\': "、"
+      "_" : "——"
+      "'":  ["‘", "’","'"]
+      "\"":  ["“", "”","\""]
+      "[": ["【", "["]
+      "]": ["】", "]"]
+      "$": "$"
+      "<": ["《", "<"]
+      ">": ["》", ">"]
+
   menu:
     # 候选词个数
     page_size: 9
