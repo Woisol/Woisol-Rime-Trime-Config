@@ -1,0 +1,6 @@
+# Rime user dictionary
+#@/db_name	rime_mint
+#@/db_type	userdb
+#@/rime_version	1.11.2
+#@/tick	0
+#@/user_id	efac1999-f202-4e24-ab16-deffd7ec2683
