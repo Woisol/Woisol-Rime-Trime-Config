@@ -1,0 +1,7 @@
+patch:
+  melt_eng:
+    enable_sentence: true         # 关闭自动造句
+    enable_completion: true       # 关闭自动提示
+  menu:
+    # 候选词个数
+    page_size: 9

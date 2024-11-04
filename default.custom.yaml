@@ -1,0 +1,24 @@
+patch:
+  # key_binder:
+  #   {}
+  menu/page_size: 9
+  schema_list:
+    - schema: rime_mint
+    - schema: double_pinyin_flypy
+  # 切换方案时显示的标题
+  switcher/caption: 方案切换
+
+  # 切换方案的快捷键
+  switcher/hotkeys:
+      - Control+grave
+      - F4
+  switcher/fold_options: false
+    # 对选项进行缩写
+  ascii_composer:
+    good_old_caps_lock: true
+    switch_key:
+      Caps_Lock: noop
+      Control_L: commit_code
+      Control_R: noop
+      Shift_L: noop
+      Shift_R: noop
