@@ -1,7 +1,8 @@
 patch:
-  key_binder:
-    {}
-  menu/page_size: 9
+  key_binder/bindings:
+      - { when: paging, accept: minus, send: Page_Up }             # 编码窗口翻页
+      - { when: has_menu, accept: equal, send: Page_Down }
+  menu/page_size: 10
   schema_list:
     - schema: rime_mint
     - schema: double_pinyin_flypy
@@ -10,7 +11,7 @@ patch:
 
   # 切换方案的快捷键
   switcher/hotkeys:
-      - Control+grave
+      # - Control+grave
       - F4
   switcher/fold_options: false
     # 对选项进行缩写

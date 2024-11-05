@@ -6,8 +6,9 @@ customization:
   rime_version: 1.11.2
 patch:
   style:
-    color_scheme: mint_light_blue             # 默认配色方案
-    color_scheme_dark: mint_dark_blue         # 深色模式下，Weasel 的配色方案，Windows 10 1809+ 可用
+    # ！说为什么要用name而不是变量名而且改了也不生效，估计是不能用-而必须用_！
+    color_scheme: woisol_light             # 默认配色方案
+    color_scheme_dark: woisol_light         # 深色模式下，Weasel 的配色方案，Windows 10 1809+ 可用
 
     # 全局字体
     # 格式：字体1:起始码位:结束码位:字重:字形,字体2……，字体会依次 fallback
@@ -38,7 +39,7 @@ patch:
     display_tray_icon: false                 # 托盘显示独立于语言栏的额外图标：true；false
     antialias_mode: default                  # 次像素反锯齿设定：default；force_dword；cleartype；grayscale；aliased
     candidate_abbreviate_length: 0           # 候选项略写，超过此数字则用省略号代替。设置为 0 则不启用此功能
-    mouse_hover_ms: 0                        # ! 已弃用。鼠标悬停选词响应时间（ms），设置为 0 时禁用该功能
+    mouse_hover_ms: 0                        # 已弃用。鼠标悬停选词响应时间（ms），设置为 0 时禁用该功能
     hover_type: semi_hilite                  # 鼠标在候选窗口悬停时：none（无动作）；hilite（选中鼠标下的候选）；semi_hilite（高亮鼠标下的候选）
     paging_on_scroll: true                   # 在候选窗口上滑动滚轮的行为：true（翻页）；false （选中下一个候选）
     click_to_capture: false                  # 鼠标点击候选项，创建截图：true；false
@@ -50,51 +51,67 @@ patch:
       max_height: 100                        # 候选框最大高度，horizontal 布局如宽超此尺寸则换行显示候选，设置为 0 不启用此功能
       max_width: 0                           # 候选框最大宽度，文本竖排模式下如高度超此尺寸则换列显示候选，设置为 0 不启用此功能
       min_height: 0                          # 候选框最小高度
-      min_width: 50                          # 候选框最小宽度
+      min_width: 160                         # 候选框最小宽度
       border_width: 0                        # 边框宽度；又名 border
       margin_x: 8                            # 主体元素和候选框的左右边距；为负值时，不显示候选框
       margin_y: 8                            # 主体元素的上下边距；为负值时，不显示候选框
-      spacing: 10                            # inline_preedit 为否时，编码区域和候选区域的间距
-      candidate_spacing: 2                   # 候选项之间的间距
-      hilite_spacing: 6                      # 候选项和相应标签的间距
-      hilite_padding: 8                      # 高亮区域和内部文字的间距，影响高亮区域大小
-      # hilite_padding_x: 8                  # 高亮区域和内部文字的左右间距，如无特殊指定则依 hilite_padding 设置
-      # hilite_padding_y: 8                  # 高亮区域和内部文字的上下间距，如无特殊指定则依 hilite_padding 设置
-      shadow_radius: 2                       # 阴影区域半径，为 0 不显示阴影；需要同时在配色方案中指定非透明的阴影颜色
+      spacing: 0                            # inline_preedit 为否时，编码区域和候选区域的间距
+      candidate_spacing: 0                   # 候选项之间的间距
+      hilite_spacing: 0                      # 候选项和相应标签的间距
+      hilite_padding: 2                      # 高亮区域和内部文字的间距，影响高亮区域大小s
+      hilite_padding_x: 6                  # 高亮区域和内部文字的左右间距，如无特殊指定则依 hilite_padding 设置
+      hilite_padding_y: 2                  # 高亮区域和内部文字的上下间距，如无特殊指定则依 hilite_padding 设置
+      shadow_radius: 6                       # 阴影区域半径，为 0 不显示阴影；需要同时在配色方案中指定非透明的阴影颜色
       shadow_offset_x: 4                     # 阴影左右偏移距离
       shadow_offset_y: 4                     # 阴影上下偏移距离
       corner_radius: 5                       # 候选窗口圆角半径
       round_corner: 5                        # 候选背景色块圆角半径，又名 hilited_corner_radius
-      mint_light_blue:
-  preset_color_schemes:
-    woisol-light:
+  # !添加而非覆盖原有主题！
+  preset_color_schemes/+:
+    woisol_light:
       name: "Woisol-Light"
       author: Woisol
-      # 拼音串
-      text_color: 0x6495ed
-      # 背景
-      back_color: 0xefefef
-      # 预选栏编号颜色
-      label_color: 0xcac9c8
-      # 边框
-      border_color: 0xefefef
-      shadow_color: 0xb4000000
-      # 注解文字
-      comment_text_color: 0xcac9c8
-      # 非第一候选项
-      candidate_text_color: 0x424242
-      # 拼音串高亮
-      hilited_text_color: 0xed9564
-      # 拼音串高亮背景
-      hilited_back_color: 0xefefef
-      # 第一候选项背景
-      hilited_candidate_back_color: 0xed9564
-      # 第一候选项
-      hilited_candidate_text_color: 0xefefef
-      # 第一候选项编号颜色
-      hilited_candidate_label_color: 0xcac9c8
-      # 第一候选项编号颜色
-      hilited_label_color: 0xcac9c8
-      # 注解文字高亮
-      hilited_comment_text_color: 0xefefef
+      color_format: rgba                       # 颜色格式：argb（0xaarrggbb）；rgba（0xrrggbbaa）；abgr（0xaabbggrr 默认）
+      # !？？？rgba才能显示emoji？？？并不是单纯就是鸿雷缺了字体()
+      # from https://pdog18.github.io/rime-soak/#/theme
+      text_color: 0x000000
+      back_color: 0xffffff
+      border_color: 0xffffff
+      label_color: 0x444444
+      hilited_text_color: 0x000000
+      hilited_back_color: 0xD4D4D4
+      candidate_text_color: 0x000000
+      comment_text_color: 0x444444
+      hilited_candidate_text_color: 0xffffff
+      hilited_comment_text_color: 0xEEEEEE
+      hilited_candidate_back_color: 0xFFC800
+      hilited_label_color: 0xFFC866
+      # !死活不显示出来颜色……
+      # # 拼音串
+      # text_color: 0xfccb1b
+      # # 背景
+      # back_color: 0xaaa
+      # # 预选栏编号颜色
+      # label_color: 0xaaaaaa
+      # # 边框
+      # border_color: 0xaaaaaa
+      # shadow_color: 0xb4000000
+      # # 注解文字
+      # comment_text_color: 0xaaaaaa
+      # # 非第一候选项
+      # candidate_text_color: 0xcac9c8
+      # # 拼音串高亮
+      # hilited_text_color: 0xfccb1b
+      # # 拼音串高亮背景
+      # hilited_back_color: 0x222222
+      # # 第一候选项背景
+      # hilited_candidate_back_color: 0xed9564
+      # # 第一候选项
+      # hilited_candidate_text_color: 0xefefef
+      # # 第一候选项编号颜色
+      # hilited_candidate_label_color: 0xcac9c8
+      # # 第一候选项编号颜色
+      # hilited_label_color: 0xcac9c8
+      # # 注解文字高亮
+      # hilited_comment_text_color: 0xefefef
 
