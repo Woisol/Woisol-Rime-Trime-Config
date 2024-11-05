@@ -2,6 +2,8 @@ patch:
   key_binder/bindings:
       - { when: paging, accept: minus, send: Page_Up }             # 编码窗口翻页
       - { when: has_menu, accept: equal, send: Page_Down }
+      # ！修复Ctrl+Space切换中英文的问题！！！翻了Github issue翻了两个才看到提到一个知乎问题：https://www.zhihu.com/question/22288432，修改注册表两个都改成0就行了！另外还提到设置->时间和语言->输入->高级键盘设置->输入语言热键哪里修改也行但是重启生效和注册表一起了不知道哪个生效的
+      # - { when: always, accept: control+space, select: control+a }
   menu/page_size: 10
   schema_list:
     - schema: rime_mint

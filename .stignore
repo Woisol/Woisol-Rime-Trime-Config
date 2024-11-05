@@ -1,1 +1,7 @@
+build
+sync
+preview
+user.yaml
 installation.yaml
+*.old
+*.userdb
