@@ -1,6 +1,7 @@
 build
 sync
 preview
+opencc
 user.yaml
 installation.yaml
 *.old
