@@ -164,23 +164,23 @@ name: "标准"
 preset_color_schemes:
   default:
     author: "Woisol"
-    back_color: 0xffffffff
-    baoe: 0xffffffff
-    bbs: 0xffffffe0
-    benter: 0xfffccb1b
-    bgn: 0xffffffe0
-    bh1: 0xffffffff
-    bh2: 0xffffffff
-    bh3: 0xffffffff
-    bh4: 0xffffffff
-    bkg: 0xffffffff
+    back_color: 0x64ffffff
+    baoe: 0x64ffffff
+    bbs: 0x64ffffe0
+    benter: 0x64fccb1b
+    bgn: 0x64ffffe0
+    bh1: 0x64ffffff
+    bh2: 0x64ffffff
+    bh3: 0x64ffffff
+    bh4: 0x64ffffff
+    bkg: 0x64ffffff
     candidate_separator_color: 0xffffffff
     candidate_text_color: 0xff000000
     comment_text_color: 0xffe1e3e7
     dark_scheme: steam
     hilited_back_color: 0xffffffff
-    hilited_candidate_back_color: 0xffffffff
-    hilited_candidate_text_color: 0xfffccb1b
+    hilited_candidate_back_color: 0xfffccb1b
+    hilited_candidate_text_color: 0xffffffff
     hilited_comment_text_color: 0xff000000
     hilited_key_back_color: 0xfffccb1b
     hilited_key_symbol_color: 0xffffffff
@@ -191,12 +191,12 @@ preset_color_schemes:
     key_back_color: 0xffffffff
     key_symbol_color: 0xff838383
     key_text_color: 0xff000000
-    keyboard_back_color: 0xffe1e3e7
+    keyboard_back_color: background.png
     label_color: 0xfffccb1b
     name: "Default"
     off_key_back_color: 0xffffffe0
     off_key_text_color: 0xff838383
-    preview_back_color: 0xffffffe0
+    preview_back_color: 0xaaffffe0
     preview_text_color: 0xfffccb1b
     taoe: 0xfffccb1b
     tbs: 0xff000000
@@ -213,9 +213,9 @@ preset_color_schemes:
     author: "风花絮"
     back_color: 0xffffffff
     baoe: 0xffffffff
-    bbs: 0xffffffe0
+    bbs: 0xffacb2c2
     benter: 0xff3266a0
-    bgn: 0xffffffe0
+    bgn: 0xffacb2c2
     bh1: 0xffffffff
     bh2: 0xffffffff
     bh3: 0xffffffff
@@ -241,9 +241,9 @@ preset_color_schemes:
     keyboard_back_color: 0xffe1e3e7
     label_color: 0xff3266a0
     name: "标准配色！"
-    off_key_back_color: 0xffffffe0
+    off_key_back_color: 0xffacb2c2
     off_key_text_color: 0xff838383
-    preview_back_color: 0xffffffe0
+    preview_back_color: 0xffacb2c2
     preview_text_color: 0xff3266a0
     taoe: 0xff3266a0
     tbs: 0xffffffff
@@ -584,7 +584,7 @@ preset_keyboards:
   number:
     ascii_mode: 1
     author: "暖暖"
-    keys: [{click: "{}{Left}", key_back_color: bgn, key_text_color: tgn, long_click: "【】{Left}"}, {click: "+", key_back_color: bgn, key_text_color: tgn, long_click: "#"}, {click: 1}, {click: 2}, {click: 3}, {click: space1, key_back_color: bgn, key_text_color: tgn}, {click: _, key_back_color: bgn, key_text_color: tgn, long_click: "[]{Left}"}, {click: "-", key_back_color: bgn, key_text_color: tgn, long_click: "%"}, {click: 4}, {click: 5}, {click: 6}, {click: Keyboard_defaulten, key_back_color: bgn, key_text_color: tgn, label: EN}, {click: "(){Left}", key_back_color: bgn, key_text_color: tgn, long_click: "@"}, {click: "*", key_back_color: bgn, key_text_color: tgn, long_click: "±"}, {click: 7, long_click: select_all}, {click: 8, long_click: copy}, {click: 9, long_click: paste_clip, swipe_down: paste}, {click: BackSpace, key_back_color: bbs, key_text_color: tbs}, {click: Keyboard_default, key_back_color: bgn, key_text_color: tgn, long_click: ":"}, {click: "/", key_back_color: bgn, key_text_color: tgn, long_click: "\\"}, {click: ., key_back_color: bgn, key_text_color: tgn, long_click: Keyboard_bqrw}, {click: 0, long_click: cut}, {click: "=", key_back_color: bgn, key_text_color: tgn, long_click: "≠"}, {click: Return, key_back_color: benter, key_text_color: tenter, long_click: Menu}]
+    keys: [{click: "{}{Left}", key_back_color: bgn, key_text_color: tgn, long_click: "【】{Left}"}, {click: "+", key_back_color: bgn, key_text_color: tgn, long_click: "#"}, {click: 1, key_back_color: bh1, key_text_color: th1}, {click: 2, key_back_color: bh1, key_text_color: th1}, {click: 3, key_back_color: bh1, key_text_color: th1}, {click: space1, key_back_color: bgn, key_text_color: tgn}, {click: _, key_back_color: bgn, key_text_color: tgn, long_click: "[]{Left}"}, {click: "-", key_back_color: bgn, key_text_color: tgn, long_click: "%"}, {click: 4, key_back_color: bh1, key_text_color: th1}, {click: 5, key_back_color: bh1, key_text_color: th1}, {click: 6, key_back_color: bh1, key_text_color: th1}, {click: Keyboard_defaulten, key_back_color: bgn, key_text_color: tgn, label: EN}, {click: "(){Left}", key_back_color: bgn, key_text_color: tgn, long_click: "@"}, {click: "*", key_back_color: bgn, key_text_color: tgn, long_click: "±"}, {click: 7, key_back_color: bh1, key_text_color: th1, long_click: select_all}, {click: 8, key_back_color: bh1, key_text_color: th1, long_click: copy}, {click: 9, key_back_color: bh1, key_text_color: th1, long_click: paste_clip, swipe_down: paste}, {click: BackSpace, key_back_color: bbs, key_text_color: tbs}, {click: Keyboard_default, key_back_color: bgn, key_text_color: tgn, long_click: ":"}, {click: "/", key_back_color: bgn, key_text_color: tgn, long_click: "\\"}, {click: ., key_back_color: bgn, key_text_color: tgn, long_click: Keyboard_bqrw}, {click: 0, key_back_color: bh1, key_text_color: th1, long_click: cut}, {click: "=", key_back_color: bgn, key_text_color: tgn, long_click: "≠"}, {click: Return, key_back_color: benter, key_text_color: tenter, long_click: Menu}]
     name: "数字+"
     width: 16.6
   numberb:
@@ -610,7 +610,7 @@ preset_keys:
     send: BRIGHTNESS_UP
   BackSpace:
     functional: false
-    label: "退格"
+    label: "⇦"
     preview: "⇦"
     repeatable: true
     send: BackSpace
@@ -1611,13 +1611,13 @@ round_corner:
   3: 12
 style:
   auto_caps: ascii
-  background_dim_amount: 0.5 # !这啥 官网文档说明了是暂无功能
+  background_dim_amount: 0.5 # del这啥 官网文档说明了是暂无功能
   candidate_font: han.ttf
   candidate_padding: 20
   candidate_spacing: 0.5
-  candidate_text_size: 20
+  candidate_text_size: 25
   candidate_use_cursor: true
-  candidate_view_height: 25
+  candidate_view_height: 30
   color_scheme: default
   comment_font: comment.ttf
   comment_height: 20
@@ -1700,36 +1700,38 @@ style:
   latin_font: latin.ttf
   latin_locale: en_US
   layout:
-    all_phrases: false
+    all_phrases: true
     alpha: 0xff
-    background: background.png
+    # background: background.png
     border: 0
     elevation: 10
     line_spacing: 0
-    line_spacing_multiplier: 1.2
+    line_spacing_multiplier: 1
     margin_x: 5
     margin_y: 5
     max_entries: 5
     max_height: 300
-    max_length: 14
-    max_width: 360
-    min_height: 50
-    min_length: 4
+    max_length: 36
+    max_width: 1000
+    # !不加h就会导致多行是非常奇怪
+    min_height: 10
+    min_length: 0
+    # !不加min-w(和max-w)会导致变成一长竖条
     min_width: 0
     movable: false
-    position: fixed
+    position: right
     real_margin: 3
-    round_corner: 0
-    spacing: 1
-    sticky_lines: 1
+    round_corner: 20
+    spacing: -80
+    sticky_lines: 0
     sticky_lines_land: 0
   locale: zh_CN
   preview_font: latin.ttf
-  preview_height: 56
-  preview_offset: "-32"
-  preview_text_size: 40
+  preview_height: 70
+  preview_offset: "0"
+  preview_text_size: 80
   preview_text_color: "0xff000000"
-  preview_back_color: "0xffe0ffff"
+  preview_back_color: "0xaae0ffff"
   proximity_correction: true
   reset_ascii_mode: false
   root_background: background.png
@@ -1743,12 +1745,13 @@ style:
   vertical_correction: "-5"
   vertical_gap: 8
   window:
-  - { composition: "%s", end: "", letter_spacing: 0.12, start: "" }
+  # - { composition: "%s", end: "", start: "" }
   - {
       candidate: "%s",
       comment: "%s",
       end: "",
       label: "%s.",
-      sep: "☁️️",
+      # sep: "☁️️",
       start: "\n"
     }
+  # - { start: "|", move: ' ✨', end: "" }
