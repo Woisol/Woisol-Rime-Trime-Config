@@ -1,4 +1,9 @@
 patch:
+  schema/name: "小鹤双拼-Woisol专用"
+  schema/version: "24.12.12"
+  schema/author:
+    - Mintimate
+    - Woisol
   switches:
   # - name: ascii_mode
   #   reset: 0
@@ -56,7 +61,9 @@ patch:
       # "?": ["？","?","？？？","？？？？？"]
       # "!": ["！","!","！！！","！！！！！"]
   key_binder/bindings:
-    - :
+    # - :
+  # key_binder/select_first_character: ";"
+  # key_binder/select_last_character: "'"
 
   menu:
     # 候选词个数

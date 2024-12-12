@@ -59,22 +59,22 @@ function mint_date_time_translator(input, seg)
 
     -- 输入日期
     if (input == "date") then
-        yield(make_hight_quality_candidate("date", seg.start, seg._end, os.date("%Y%m%d"), "yyyyMMdd"))
-        yield(make_hight_quality_candidate("date", seg.start, seg._end, os.date("%Y-%m-%d"), "yyyy-MM-dd"))
-        yield(make_hight_quality_candidate("date", seg.start, seg._end, os.date("%Y/%m/%d"), "yyyy/MM/dd"))
-        yield(make_hight_quality_candidate("date", seg.start, seg._end, os.date("%Y.%m.%d"), "yyyy.MM.dd"))
-        yield(make_hight_quality_candidate("date", seg.start, seg._end, os.date("%Y年%m月%d日"), "中文简写"))
+        yield(make_hight_quality_candidate("date", seg.start, seg._end, os.date("%Y-%m-%d"), "Y-M-d"))
+        yield(make_hight_quality_candidate("date", seg.start, seg._end, os.date("%%m%d"), "yMd"))
+        yield(make_hight_quality_candidate("date", seg.start, seg._end, os.date("%Y年%m月%d日"), ""))
+        yield(make_hight_quality_candidate("date", seg.start, seg._end, os.date("%Y/%m/%d"), "Y/M/d"))
+        -- yield(make_hight_quality_candidate("date", seg.start, seg._end, os.date("%Y.%m.%d"), "yyyy.MM.dd"))
 		-- Chinese big date
 		local chinese_num = {
 			["1"]="一", ["2"]="二", ["3"]="三", ["4"]="四", ["5"]="五",
 			["6"]="六", ["7"]="七", ["8"]="八", ["9"]="九", ["0"]="〇"
 		}
 		local chinese_month = {"一月", "二月", "三月", "四月", "五月", "六月", "七月", "八月", "九月", "十月", "十一月", "十二月"}
-	
+
 		local date_y_chinese = os.date("%Y"):gsub("%d", chinese_num) .. "年"
 		local date_m_chinese = chinese_month[tonumber(os.date("%m"))]
 		local date_d_chinese = tostring(tonumber(os.date("%d"))):gsub("%d", chinese_num) .. "日"
-	
+
 		if tonumber(os.date("%d")) > 9 then
 			date_d_chinese = string.sub(date_d_chinese, 1, 3) .. "十" .. string.sub(date_d_chinese, 4)
 		end
@@ -101,7 +101,7 @@ function mint_date_time_translator(input, seg)
         local weekTab = {'日', '一', '二', '三', '四', '五', '六'}
         yield(make_hight_quality_candidate("week", seg.start, seg._end, "周"..weekTab[tonumber(os.date("%w")+1)], "星期"))
 		yield(make_hight_quality_candidate("week", seg.start, seg._end, os.date("%A"), ""))
-        yield(make_hight_quality_candidate("week", seg.start, seg._end, "星期"..weekTab[tonumber(os.date("%w")+1)], "星期"))        
+        yield(make_hight_quality_candidate("week", seg.start, seg._end, "星期"..weekTab[tonumber(os.date("%w")+1)], "星期"))
         yield(make_hight_quality_candidate("week", seg.start, seg._end, os.date("%a"), "缩写"))
         yield(make_hight_quality_candidate("week", seg.start, seg._end, os.date("%W"), "周数"))
     end
@@ -111,7 +111,7 @@ function mint_date_time_translator(input, seg)
         yield(make_hight_quality_candidate("month", seg.start, seg._end, os.date("%B"), "全称"))
         yield(make_hight_quality_candidate("month", seg.start, seg._end, os.date("%b"), "缩写"))
     end
-    
+
     if (input == "timestamp") then
         yield(make_hight_quality_candidate("timestamp", seg.start, seg._end, string.format('%d', os.time()), "秒"))
     end

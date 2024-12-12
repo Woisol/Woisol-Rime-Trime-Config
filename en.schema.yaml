@@ -1,0 +1,24 @@
+# Rime schema
+# encoding: utf-8
+
+# 适配了双拼
+# 双拼键位映射复制自 https://github.com/rime/rime-double-pinyin
+# 双拼之间主要就是 speller/algebra 和 translator/preedit_format 这里有区别。
+
+# 方案说明
+schema:
+  schema_id: en
+  name: "Pure English"
+  version: "24.12.12"
+  author:
+    - Woisol
+  description: |
+    Pure english, no any input method, to cope with the conflict with the use of Termux_x11.
+
+switches:
+
+engine:
+
+key_binder:
+
+menu:
