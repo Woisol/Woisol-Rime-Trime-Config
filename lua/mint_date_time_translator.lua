@@ -59,8 +59,12 @@ function mint_date_time_translator(input, seg)
 
     -- 输入日期
     if (input == "date") then
+        yield(make_hight_quality_candidate("date", seg.start, seg._end, os.date("%y-%m-%d"), "y-M-d"))
+        yield(make_hight_quality_candidate("date", seg.start, seg._end, os.date("%y%m%d"), "yMd"))
         yield(make_hight_quality_candidate("date", seg.start, seg._end, os.date("%Y-%m-%d"), "Y-M-d"))
-        yield(make_hight_quality_candidate("date", seg.start, seg._end, os.date("%%m%d"), "yMd"))
+        yield(make_hight_quality_candidate("date", seg.start, seg._end, os.date("%Y%m%d"), "yMd"))
+        yield(make_hight_quality_candidate("date", seg.start, seg._end, os.date("%m-%d"), "M-d"))
+        yield(make_hight_quality_candidate("date", seg.start, seg._end, os.date("%m%d"), "Md"))
         yield(make_hight_quality_candidate("date", seg.start, seg._end, os.date("%Y年%m月%d日"), ""))
         yield(make_hight_quality_candidate("date", seg.start, seg._end, os.date("%Y/%m/%d"), "Y/M/d"))
         -- yield(make_hight_quality_candidate("date", seg.start, seg._end, os.date("%Y.%m.%d"), "yyyy.MM.dd"))
@@ -81,7 +85,6 @@ function mint_date_time_translator(input, seg)
 
 		yield(make_hight_quality_candidate("date", seg.start, seg._end, date_y_chinese .. date_m_chinese .. date_d_chinese, "中文大写"))
 
-		yield(make_hight_quality_candidate("date", seg.start, seg._end, os.date("%m-%d-%Y"), "MM-dd-yyyy"))
 
     end
 
