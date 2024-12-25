@@ -15,7 +15,7 @@ patch:
   schema_list:
     - {schema: double_pinyin_flypy}
     - {schema: en}
-    - {schema: rime_mint}
+    - {schema: latex}
   "switcher/caption": "方案切换"
   "switcher/fold_options": false
   "switcher/hotkeys":
